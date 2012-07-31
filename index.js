@@ -57,7 +57,7 @@ var ConsoleColor = function ConsoleColor() {
 ConsoleColor.prototype.help = function () {
 	var self = this;
 
-	util.puts("Available colors:");
+	util.puts("\nAvailable colors:");
 
 	util.print("\nForeground: ");
 	this.foreground_colors.keys().forEach(function(color) {
@@ -95,14 +95,6 @@ var Background = function Background() { return this; };
 // ----------------------------------------------------------------------
 // Object Prototypes
 //
-Object.prototype.keys = function () {
-	var keys = [];
-	for(var i in this) if (this.hasOwnProperty(i)) {
-		keys.push(i);
-	}
-	return keys;
-};
-
 Object.prototype.className = function() {
 	var obj = this;
     if (obj && obj.constructor && obj.constructor.toString) {
